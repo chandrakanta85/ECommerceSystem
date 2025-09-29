@@ -22,12 +22,12 @@ public class Main {
             printMenu();
             try {
                 choice = scanner.nextInt();
-                scanner.nextLine(); // Consume newline
+                scanner.nextLine(); 
                 handleChoice(choice);
             } catch (java.util.InputMismatchException e) {
                 System.err.println("Invalid input. Please enter a number.");
-                scanner.nextLine(); // Clear the invalid input from the scanner
-                choice = 0; // Set choice to an invalid value
+                scanner.nextLine(); 
+                choice = 0; 
             }
         } while (choice != 7);
         scanner.close();
@@ -66,7 +66,6 @@ public class Main {
                 viewAllProductsAndOrders();
                 break;
             case 7:
-                // No need to call service.saveData() anymore as changes are written directly to the database.
                 System.out.println("Exiting application. Data will be saved automatically.");
                 break;
             default:
@@ -169,7 +168,7 @@ public class Main {
                     Product p = productOpt.get();
                     if (p.getStock() > 0) {
                         productsInOrder.add(p);
-                        p.setStock(p.getStock() - 1); // Decrease stock
+                        p.setStock(p.getStock() - 1); WDTG 
                         totalCost += p.getPrice();
                         System.out.println("Product added to order: " + p.getName());
                     } else {
