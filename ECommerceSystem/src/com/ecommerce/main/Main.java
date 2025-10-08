@@ -168,7 +168,7 @@ public class Main {
                     Product p = productOpt.get();
                     if (p.getStock() > 0) {
                         productsInOrder.add(p);
-                        p.setStock(p.getStock() - 1); WDTG 
+                        p.setStock(p.getStock() - 1); 
                         totalCost += p.getPrice();
                         System.out.println("Product added to order: " + p.getName());
                     } else {
@@ -220,3 +220,4 @@ public class Main {
         }
     }
 }
+
